@@ -438,3 +438,74 @@ html {
   0% { background-position: 0% center; }
   100% { background-position: 200% center; }
 }
+
+/* ===== CARROSSEL ANIMADO "EXCLUSIVO PARA MÉDICOS DA ESTÉTICA" ===== */
+
+/* Container do carrossel */
+.elementor-element-da52d9b {
+  background-color: #1a1a1a !important;
+  background: #1a1a1a !important;
+  padding: 15px 0 !important;
+  overflow: hidden !important;
+}
+
+/* Wrapper do Swiper */
+.elementor-image-carousel-wrapper.swiper {
+  overflow: visible !important;
+  width: 100% !important;
+}
+
+/* Slides do carrossel */
+.elementor-image-carousel .swiper-wrapper {
+  transition-timing-function: linear !important;
+  align-items: center !important;
+}
+
+.elementor-image-carousel .swiper-slide {
+  width: auto !important;
+  flex-shrink: 0 !important;
+  height: auto !important;
+}
+
+.elementor-image-carousel .swiper-slide figure {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.elementor-image-carousel .swiper-slide-image {
+  height: 50px !important;
+  width: auto !important;
+  max-width: 180px !important;
+  object-fit: contain !important;
+}
+
+/* Ajustes mobile para o carrossel */
+@media screen and (max-width: 767px) {
+  .elementor-element-da52d9b {
+    padding: 12px 0 !important;
+  }
+
+  .elementor-image-carousel .swiper-slide-image {
+    height: 40px !important;
+    max-width: 150px !important;
+  }
+
+  /* Garantir que o carrossel seja visível */
+  .elementor-widget-image-carousel {
+    width: 100% !important;
+    overflow: visible !important;
+  }
+
+  .elementor-image-carousel-wrapper {
+    overflow: visible !important;
+  }
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .elementor-image-carousel .swiper-slide-image {
+    height: 45px !important;
+    max-width: 160px !important;
+  }
+}
+}
