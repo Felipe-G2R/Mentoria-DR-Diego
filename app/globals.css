@@ -213,6 +213,27 @@ html {
   color: #c9a227 !important;
 }
 
+/* CORREÇÃO: Elemento superior com fundo preto e texto branco (todos dispositivos) */
+.elementor-element-7ac5ac1 {
+  background-color: #000000 !important;
+  background: #000000 !important;
+}
+
+.elementor-element-7ac5ac1 .e-con-inner {
+  background-color: #000000 !important;
+  background: #000000 !important;
+}
+
+.elementor-element-e75af78 {
+  background-color: #000000 !important;
+  background: #000000 !important;
+}
+
+.elementor-element-e75af78 h2,
+.elementor-element-e75af78 .elementor-heading-title {
+  color: #FFFFFF !important;
+}
+
 /* ===== CORREÇÕES ESPECÍFICAS PARA MENTORIA 3.0 ===== */
 
 /* CORREÇÃO CRÍTICA: Textos com highlights/badges desalinhados no mobile */
@@ -224,7 +245,7 @@ html {
     overflow: visible !important;
   }
 
-  /* Container principal - garantir que não haja overflow */
+  /* Container principal - FUNDO PRETO para visibilidade do texto */
   .elementor-element-7ac5ac1 {
     padding: 12px 10px !important;
     --padding-top: 12px !important;
@@ -232,12 +253,16 @@ html {
     min-height: auto !important;
     overflow: visible !important;
     height: auto !important;
+    background-color: #000000 !important;
+    background: #000000 !important;
   }
 
   /* Inner container - também evitar overflow */
   .elementor-element-7ac5ac1 > .e-con-inner {
     overflow: visible !important;
     height: auto !important;
+    background-color: #000000 !important;
+    background: #000000 !important;
   }
 
   /* Texto superior (e75af78) - "PARA MÉDICOS QUE JÁ ESTÃO CANSADOS DE..." */
@@ -247,13 +272,15 @@ html {
     margin-bottom: 8px !important;
     overflow: visible !important;
     display: block !important;
+    background-color: #000000 !important;
+    background: #000000 !important;
   }
 
   .elementor-element-e75af78 h2,
   .elementor-element-e75af78 .elementor-heading-title {
     font-size: 11px !important;
     line-height: 1.5 !important;
-    color: #FFF9EE !important;
+    color: #FFFFFF !important;
     visibility: visible !important;
     opacity: 1 !important;
     overflow: visible !important;
