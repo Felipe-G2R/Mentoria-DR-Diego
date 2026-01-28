@@ -1,0 +1,413 @@
+/* Reset e ajustes globais */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Força a largura correta em todos os dispositivos */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/* Correções Mobile para Elementor */
+@media screen and (max-width: 767px) {
+  /* Container principal - evitar overflow */
+  .elementor {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+  }
+
+  /* Seções - garantir largura máxima */
+  .elementor-section,
+  .e-con,
+  .elementor-container {
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+  }
+
+  /* Hero section - ajustar altura e background */
+  .elementor-section-height-full,
+  .e-con-full {
+    min-height: auto !important;
+    height: auto !important;
+  }
+
+  /* Background images - melhor posicionamento mobile */
+  [data-element_type="container"],
+  .elementor-section {
+    background-position: center center !important;
+    background-size: cover !important;
+  }
+
+  /* Imagens de background do hero - ajuste de posição */
+  .e-con[data-id] {
+    background-position: top center !important;
+  }
+
+  /* CORREÇÃO CRÍTICA: Texto cortado no topo */
+  /* Garantir que a primeira seção seja visível */
+  body > div:first-child,
+  .elementor:first-child,
+  .elementor-section:first-child,
+  .e-con:first-child {
+    margin-top: 0 !important;
+    padding-top: 10px !important;
+    transform: none !important;
+    position: relative !important;
+    top: 0 !important;
+  }
+
+  /* Texto sobre fundo escuro - melhorar legibilidade */
+  .elementor-heading-title {
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8) !important;
+    padding: 0 10px !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  /* Seção EXCLUSIVO PARA MÉDICOS - garantir visibilidade */
+  .elementor-element-1772ecb h2,
+  .elementor-widget-heading h2 {
+    font-size: 1.3rem !important;
+    line-height: 1.4 !important;
+    padding: 0 15px !important;
+    margin-top: 0 !important;
+  }
+
+  /* Texto dourado/highlight - garantir que não seja cortado */
+  .cor2,
+  [style*="color: #c9a227"],
+  [style*="color:#c9a227"],
+  span[style*="background"] {
+    display: inline-block !important;
+    padding: 2px 5px !important;
+    line-height: 1.5 !important;
+  }
+
+  /* Colunas/containers - evitar que estoure */
+  .elementor-column,
+  .e-child {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Widget de texto - padding adequado */
+  .elementor-widget-heading,
+  .elementor-widget-text-editor {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+
+  /* Botões - centralizar e ajustar */
+  .elementor-button-wrapper {
+    text-align: center !important;
+    width: 100% !important;
+    padding: 0 15px !important;
+  }
+
+  .elementor-button {
+    width: 100% !important;
+    max-width: 320px !important;
+    margin: 0 auto !important;
+    display: block !important;
+  }
+
+  /* Ícone de lista - ajustar espaçamento */
+  .elementor-icon-list-items {
+    padding: 0 15px !important;
+  }
+
+  /* Espaçamento vertical em seções mobile */
+  .elementor-section > .elementor-container,
+  .e-con > .e-con-inner {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+  }
+
+  /* Imagens responsivas */
+  .elementor-image img,
+  .elementor-widget-image img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Modal do formulário - ajustes mobile */
+  #formModal {
+    padding: 10px !important;
+  }
+
+  #formModal > div {
+    width: 95% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+  }
+
+  /* Corrigir imagem de fundo que está cortada */
+  .e-con[style*="background-image"] {
+    background-attachment: scroll !important;
+    background-position: center top !important;
+  }
+
+  /* Seção do hero com imagem do profissional */
+  .elementor-section:first-of-type,
+  .e-con:first-of-type {
+    padding-top: 15px !important;
+    background-position: right center !important;
+  }
+
+  /* Texto pequeno - aumentar para legibilidade mobile */
+  .elementor-widget-text-editor p,
+  .elementor-text-editor p {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+  }
+
+  /* Gap entre elementos */
+  .e-con > .e-con-inner {
+    gap: 15px !important;
+  }
+
+  /* CORREÇÃO: Seção superior com texto dourado cortado */
+  /* Garantir que elementos com position absolute/fixed sejam visíveis */
+  [style*="position: absolute"],
+  [style*="position:absolute"] {
+    position: relative !important;
+  }
+
+  /* Container da logo/header */
+  .e-con .elementor-widget-image:first-child {
+    margin-top: 10px !important;
+  }
+
+  /* Seção branca inferior - ajustar espaçamento */
+  .e-con[style*="background-color: #fff"],
+  .e-con[style*="background-color:#fff"],
+  .e-con[style*="background: #fff"],
+  [style*="background-color: rgb(255, 255, 255)"] {
+    padding: 20px 15px !important;
+  }
+}
+
+/* Ajustes para tablets */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .elementor-section,
+  .e-con {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  .elementor-heading-title {
+    font-size: 1.6rem !important;
+  }
+}
+
+/* Correção geral para texto com estilo dourado */
+.cor2 {
+  color: #c9a227 !important;
+}
+
+/* ===== CORREÇÕES ESPECÍFICAS PARA MENTORIA 3.0 ===== */
+
+/* CORREÇÃO CRÍTICA: Textos com highlights/badges desalinhados no mobile */
+@media screen and (max-width: 767px) {
+  /* Reset geral para evitar problemas de overflow */
+  .elementor,
+  .elementor-1010,
+  [data-elementor-id] {
+    overflow: visible !important;
+  }
+
+  /* Container principal - garantir que não haja overflow */
+  .elementor-element-7ac5ac1 {
+    padding: 12px 10px !important;
+    --padding-top: 12px !important;
+    --padding-bottom: 12px !important;
+    min-height: auto !important;
+    overflow: visible !important;
+    height: auto !important;
+  }
+
+  /* Inner container - também evitar overflow */
+  .elementor-element-7ac5ac1 > .e-con-inner {
+    overflow: visible !important;
+    height: auto !important;
+  }
+
+  /* Texto superior (e75af78) - "PARA MÉDICOS QUE JÁ ESTÃO CANSADOS DE..." */
+  .elementor-element-e75af78 {
+    padding: 8px 12px !important;
+    margin-top: 0 !important;
+    margin-bottom: 8px !important;
+    overflow: visible !important;
+    display: block !important;
+  }
+
+  .elementor-element-e75af78 h2,
+  .elementor-element-e75af78 .elementor-heading-title {
+    font-size: 11px !important;
+    line-height: 1.5 !important;
+    color: #FFF9EE !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    overflow: visible !important;
+    white-space: normal !important;
+    word-wrap: break-word !important;
+    text-overflow: clip !important;
+    max-height: none !important;
+    height: auto !important;
+    text-align: center !important;
+  }
+
+  /* CORREÇÃO: Classe cor1 - texto destacado em dourado */
+  .cor1 {
+    color: #c9a227 !important;
+    display: inline !important;
+    line-height: inherit !important;
+  }
+
+  /* CORREÇÃO CRÍTICA: Spans com background highlight amarelo/dourado */
+  /* Esses elementos estavam causando desalinhamento no mobile */
+  span[style*="background"],
+  span[style*="background-color"],
+  .elementor-heading-title span[style*="background"] {
+    display: inline !important;
+    padding: 2px 4px !important;
+    margin: 0 !important;
+    line-height: inherit !important;
+    box-decoration-break: clone !important;
+    -webkit-box-decoration-break: clone !important;
+    border-radius: 3px !important;
+  }
+
+  /* Seção hero principal com imagem (f110332) */
+  .elementor-element-f110332 {
+    min-height: auto !important;
+    --min-height: auto !important;
+    height: auto !important;
+    padding-top: 15px !important;
+    padding-bottom: 30px !important;
+    background-position: right center !important;
+    background-size: auto 100% !important;
+  }
+
+  /* Container com logo NextLevel (30ca8c8) */
+  .elementor-element-30ca8c8 {
+    padding: 10px !important;
+  }
+
+  /* Imagem da logo - garantir visibilidade */
+  .elementor-element-787aad7 img {
+    max-width: 140px !important;
+    height: auto !important;
+  }
+
+  /* Título "Você não precisa de mais informação" (1772ecb) */
+  .elementor-element-1772ecb h2 {
+    font-size: 1.3rem !important;
+    line-height: 1.4 !important;
+    padding: 0 12px !important;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8) !important;
+  }
+
+  /* Subtítulo (bf6323a) */
+  .elementor-element-bf6323a {
+    padding: 0 12px !important;
+  }
+
+  .elementor-element-bf6323a h2,
+  .elementor-element-bf6323a p {
+    font-size: 0.85rem !important;
+    line-height: 1.6 !important;
+  }
+
+  /* CORREÇÃO: Títulos com texto principal e highlights */
+  .elementor-heading-title {
+    word-spacing: normal !important;
+    letter-spacing: normal !important;
+  }
+
+  /* Garantir que textos longos com spans não quebrem de forma estranha */
+  .elementor-widget-heading h2 {
+    display: block !important;
+    width: 100% !important;
+  }
+
+  .elementor-widget-heading h2 span {
+    display: inline !important;
+    vertical-align: baseline !important;
+  }
+}
+
+/* Garantir que imagens de fundo não distorçam */
+.e-con[style*="background-image"] {
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 767px) {
+  /* Overlay escuro para melhorar legibilidade do texto sobre imagem */
+  .elementor-element-f110332::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.2) 100%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .elementor-element-f110332 > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  .elementor-element-f110332 .e-con-inner {
+    position: relative;
+    z-index: 2;
+  }
+
+  /* Seção branca com texto "Seja honesto" */
+  .elementor-element-da52d9b,
+  .elementor-element-82b1e85 {
+    padding: 20px 15px !important;
+  }
+
+  .elementor-element-da52d9b h2,
+  .elementor-element-82b1e85 p {
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+  }
+
+  /* Garantir que o primeiro elemento seja visível */
+  .elementor > .e-con:first-child,
+  .elementor > .elementor-section:first-child {
+    margin-top: 0 !important;
+    padding-top: 8px !important;
+  }
+
+  /* CORREÇÃO: Texto animado com gradiente (caso exista) */
+  .animated-gradient-text {
+    display: inline !important;
+    background: linear-gradient(90deg, #c9a227, #f5d96c, #c9a227) !important;
+    background-size: 200% auto !important;
+    background-clip: text !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    animation: gradient-flow 3s linear infinite !important;
+    line-height: inherit !important;
+  }
+}
+
+/* Keyframe para animação do gradiente */
+@keyframes gradient-flow {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
