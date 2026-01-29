@@ -66,17 +66,37 @@ html {
   background-position: right center !important;
   background-size: cover !important;
   background-repeat: no-repeat !important;
-  min-height: 400px !important;
+  min-height: 500px !important;
   position: relative !important;
+}
+
+/* Gradiente para legibilidade do texto sobre a imagem */
+.elementor-element-f110332::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.5) 40%, rgba(0, 0, 0, 0.2) 70%, rgba(0, 0, 0, 0) 100%) !important;
+  pointer-events: none !important;
+  z-index: 1 !important;
+}
+
+.elementor-element-f110332 > .e-con-inner {
+  position: relative !important;
+  z-index: 2 !important;
 }
 
 /* Container interno do hero (30ca8c8) */
 .elementor-element-30ca8c8 {
   display: flex !important;
   flex-direction: column !important;
-  justify-content: flex-end !important;
-  min-height: 380px !important;
-  padding-bottom: 20px !important;
+  justify-content: center !important;
+  align-items: flex-start !important;
+  min-height: 480px !important;
+  padding: 40px 30px !important;
+  max-width: 600px !important;
 }
 
 /* Logo NextLevel (787aad7) */
@@ -89,34 +109,100 @@ html {
   height: auto !important;
 }
 
-/* ===== SEÇÃO 3: TEXTO PRINCIPAL ===== */
+/* ===== SEÇÃO 3: TEXTO PRINCIPAL (Hero Overlay) ===== */
 /* Título "Você não precisa de mais informação" (1772ecb) */
-.elementor-element-1772ecb {
-  padding: 25px 15px 10px 15px !important;
-  background-color: #FFFFFF !important;
+.elementor-element-1772ecb,
+.elementor .elementor-element-1772ecb,
+.elementor-widget.elementor-element-1772ecb,
+div.elementor-element-1772ecb {
+  padding: 10px 0 5px 0 !important;
+  background-color: transparent !important;
+  background: transparent !important;
+  background-image: none !important;
 }
 
-.elementor-element-1772ecb h2 {
-  color: #000000 !important;
-  font-size: 1.5rem !important;
-  line-height: 1.35 !important;
+.elementor-element-1772ecb h2,
+.elementor-element-1772ecb .elementor-heading-title,
+.elementor .elementor-element-1772ecb h2,
+.elementor .elementor-element-1772ecb .elementor-heading-title,
+div.elementor-element-1772ecb h2.elementor-heading-title {
+  color: #FFFFFF !important;
+  font-size: 1.8rem !important;
+  line-height: 1.3 !important;
   font-weight: 400 !important;
-  text-shadow: none !important;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5) !important;
+  background: transparent !important;
+  background-color: transparent !important;
 }
 
 /* Subtítulo "Seja honesto..." (bf6323a) */
-.elementor-element-bf6323a {
-  padding: 10px 15px 20px 15px !important;
-  background-color: #FFFFFF !important;
+.elementor-element-bf6323a,
+.elementor .elementor-element-bf6323a,
+.elementor-widget.elementor-element-bf6323a,
+div.elementor-element-bf6323a {
+  padding: 5px 0 15px 0 !important;
+  background-color: transparent !important;
+  background: transparent !important;
+  background-image: none !important;
 }
 
 .elementor-element-bf6323a h2,
-.elementor-element-bf6323a p {
-  color: #666666 !important;
+.elementor-element-bf6323a .elementor-heading-title,
+.elementor-element-bf6323a p,
+.elementor .elementor-element-bf6323a h2,
+.elementor .elementor-element-bf6323a .elementor-heading-title,
+div.elementor-element-bf6323a h2.elementor-heading-title {
+  color: rgba(255, 255, 255, 0.85) !important;
   font-size: 0.95rem !important;
   line-height: 1.6 !important;
   font-weight: 400 !important;
-  text-shadow: none !important;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5) !important;
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* ===== BOTÃO CTA PRINCIPAL ===== */
+.elementor-element-77c9cdb {
+  margin-top: 15px !important;
+  background: transparent !important;
+}
+
+.elementor-element-77c9cdb .elementor-button,
+.elementor-button.elementor-animation-wobble-horizontal {
+  background: linear-gradient(135deg, #c9a227 0%, #a88920 100%) !important;
+  border: none !important;
+  border-radius: 5px !important;
+  padding: 15px 30px !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  color: #000000 !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 4px 15px rgba(201, 162, 39, 0.3) !important;
+}
+
+.elementor-element-77c9cdb .elementor-button:hover,
+.elementor-button.elementor-animation-wobble-horizontal:hover {
+  background: linear-gradient(135deg, #d4af37 0%, #b8982a 100%) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(201, 162, 39, 0.4) !important;
+}
+
+.elementor-element-77c9cdb .elementor-button-text,
+.elementor-button .elementor-button-text {
+  color: #000000 !important;
+  font-weight: 700 !important;
+}
+
+.elementor-element-77c9cdb .elementor-button-icon svg,
+.elementor-button .elementor-button-icon svg {
+  fill: #000000 !important;
+}
+
+.elementor-element-77c9cdb .elementor-button-icon i,
+.elementor-button .elementor-button-icon i {
+  color: #000000 !important;
 }
 
 /* ===== CORREÇÕES MOBILE ===== */
@@ -148,63 +234,69 @@ html {
 
   /* ===== HERO SECTION MOBILE ===== */
   .elementor-element-f110332 {
-    min-height: 350px !important;
-    background-position: right center !important;
-    background-size: auto 100% !important;
+    min-height: 450px !important;
+    background-position: 70% center !important;
+    background-size: cover !important;
     padding: 0 !important;
   }
 
   .elementor-element-f110332::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(to right, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.1) 60%, rgba(0,0,0,0) 100%);
-    pointer-events: none;
-    z-index: 0;
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    background: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.2) 80%, rgba(0,0,0,0) 100%) !important;
+    pointer-events: none !important;
+    z-index: 1 !important;
   }
 
-  .elementor-element-f110332 > * {
-    position: relative;
-    z-index: 1;
-  }
-
-  .elementor-element-f110332 .e-con-inner {
-    position: relative;
-    z-index: 2;
+  .elementor-element-f110332 > .e-con-inner {
+    position: relative !important;
+    z-index: 2 !important;
   }
 
   .elementor-element-30ca8c8 {
-    min-height: 320px !important;
-    padding: 15px !important;
-    padding-bottom: 20px !important;
-    justify-content: flex-end !important;
+    min-height: 420px !important;
+    padding: 20px 15px !important;
+    padding-bottom: 25px !important;
+    justify-content: center !important;
+    max-width: 100% !important;
   }
 
   .elementor-element-787aad7 img {
     max-width: 180px !important;
   }
 
-  /* ===== TEXTO PRINCIPAL MOBILE ===== */
+  /* ===== TEXTO PRINCIPAL MOBILE (Hero Overlay) ===== */
   .elementor-element-1772ecb {
-    padding: 20px 15px 8px 15px !important;
+    padding: 10px 0 5px 0 !important;
+    background-color: transparent !important;
+    background: transparent !important;
   }
 
-  .elementor-element-1772ecb h2 {
-    font-size: 1.35rem !important;
-    line-height: 1.35 !important;
+  .elementor-element-1772ecb h2,
+  .elementor-element-1772ecb .elementor-heading-title {
+    font-size: 1.4rem !important;
+    line-height: 1.3 !important;
     padding: 0 !important;
+    color: #FFFFFF !important;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6) !important;
   }
 
   .elementor-element-bf6323a {
-    padding: 8px 15px 15px 15px !important;
+    padding: 5px 0 15px 0 !important;
+    background-color: transparent !important;
+    background: transparent !important;
   }
 
   .elementor-element-bf6323a h2,
+  .elementor-element-bf6323a .elementor-heading-title,
   .elementor-element-bf6323a p {
-    font-size: 0.9rem !important;
+    font-size: 0.85rem !important;
+    color: rgba(255, 255, 255, 0.85) !important;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6) !important;
   }
 
   /* Botão CTA */
@@ -243,15 +335,31 @@ html {
 /* ===== TABLETS ===== */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .elementor-element-f110332 {
-    min-height: 450px !important;
+    min-height: 480px !important;
   }
 
   .elementor-element-30ca8c8 {
-    min-height: 400px !important;
+    min-height: 450px !important;
+    padding: 30px 25px !important;
   }
 
-  .elementor-element-1772ecb h2 {
+  .elementor-element-1772ecb,
+  .elementor-element-bf6323a {
+    background: transparent !important;
+    background-color: transparent !important;
+  }
+
+  .elementor-element-1772ecb h2,
+  .elementor-element-1772ecb .elementor-heading-title {
     font-size: 1.6rem !important;
+    color: #FFFFFF !important;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5) !important;
+  }
+
+  .elementor-element-bf6323a h2,
+  .elementor-element-bf6323a .elementor-heading-title {
+    font-size: 0.9rem !important;
+    color: rgba(255, 255, 255, 0.85) !important;
   }
 }
 
